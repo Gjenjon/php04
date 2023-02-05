@@ -1,0 +1,378 @@
+
+$baseColor: rgb(15, 10, 38);
+$baseStringColor:white;
+$conseptColor:rgb(17, 230, 212);
+$width: 1024px;
+
+body{
+    background-color: $baseColor;
+    color: $baseStringColor;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    .header-title  {
+        background-color: $baseColor;
+        display: flex;
+        width: 100%;
+        // min-width: $width;
+        height: 64px;
+    
+
+        .logo{
+            display: flex;
+
+            img{
+                filter: invert(17%) sepia(100%) saturate(0%) hue-rotate(0deg)  brightness(0) invert(100%) contrast(106%);
+            }
+
+            h1{
+                margin: auto 10px;
+                color: $conseptColor
+                // text-align: center;
+            }
+
+            h2{
+                // justify-content: center;
+                margin-top: auto;
+                margin-bottom:auto ;
+                font-weight: 200;
+                font-size: 24px;
+            }
+        }
+
+        .nav{
+            margin-left: auto ;
+            margin-top: auto;
+            margin-bottom: auto ;
+            margin-right:10px;
+
+            .nav-bar{
+                display: flex;
+                font-size: 16px;
+                color:  $conseptColor;
+
+                .logout{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    a{
+                        position: relative;
+                        display: inline-block;
+                        transition: .3s;
+                        text-decoration: none;
+                        color: $baseStringColor;
+                      
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background-color: $conseptColor;
+                            transition: .3s;
+                            transform: translateX(-50%);
+                        }
+                        
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                    
+
+                        
+                }
+            }
+        
+        }
+    }
+}
+
+.title-container{
+    margin: 10px auto;
+    width: $width;
+    height: 256px;
+    display: flex;
+    position: relative;
+    
+    .left  {
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        font-size: 20px;
+        font-weight: 700;
+
+        span{
+            color:  $conseptColor;
+        }
+
+        #typing{
+            animation: 1s blink-bar linear infinite;
+        }
+        @keyframes blink-bar{
+            0%{opacity: 0;}
+            50%{opacity: 1;}
+            100%{opacity: 0;}
+        }
+    }
+
+    .right{
+        position: absolute;
+        left: 35%;
+        top: -115%;
+        color:  $conseptColor;
+        font-size:10px;
+        -webkit-transform:scale(0.3);
+        -moz-transform:scale(0.3);
+        -ms-transform:scale(0.3);
+        -o-transform:scale(0.3);
+        transform:scale(0.3);
+    }
+}
+
+.register-container{
+    margin: 100px auto;
+    width: $width;
+
+    .register-title{
+        span{
+            color: $conseptColor;
+            padding-left: 128px;
+            font-size: 22px;
+        }
+        
+    }
+
+    .register-field{
+        display: flex;
+    }
+
+    .left{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: 10px;
+
+        ul{
+            height: 128px;
+        }
+        
+       li{
+        font-size: 18px;
+        padding: 5px;
+        font-weight: 500;
+        list-style: none;
+       } 
+    }
+
+    .right{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+        margin-right: auto;
+
+        ul{
+            height: 128px;
+        }
+
+        li{
+            font-size: 18px;
+            padding: 5px;
+            font-weight: 500;
+            list-style: none;
+           } 
+        
+        .input-bar {
+            width: 256px;
+        }
+
+        .input-comment{
+            height: 64px;
+        }
+
+        .button{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+    
+    .user-register{
+        text-align: center;
+
+        a{
+            position: relative;
+            display: inline-block;
+            transition: .3s;
+            text-decoration: none;
+            color: $baseStringColor;
+          
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: $conseptColor;
+                transition: .3s;
+                transform: translateX(-50%);
+            }
+            
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+.display-container{
+    margin: 100px auto;
+    width: $width;
+
+    .display-title{
+        span{
+            color: $conseptColor;
+            padding-left: 128px;
+            font-size: 22px;
+        }
+        
+    }
+
+    .display-field{
+        margin-left: auto;
+        margin-right: auto;
+
+        .card{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            width: $width/2;
+            height: 256px;
+            border: 1px solid $conseptColor;
+            border-radius: 5px;
+            // display: flex;
+
+            .result{
+                margin:auto;
+
+                display: flex;
+
+                .left{
+                    margin-left: 5px;
+                    width: $width/7;
+                    li{
+                        color: $conseptColor;
+                        font-weight: 700;
+                        list-style: none;
+                        padding: 5px;
+                        // border-bottom: 1px $conseptColor solid;
+
+                    }   
+                    
+                }
+
+                .right{
+                    margin-right: 5px;
+                    width: $width/3;
+                    li{
+                        list-style: none;
+                        padding: 5px;
+                        // border-bottom: 1px $conseptColor solid;
+                        word-wrap: break-word;
+                        overflow: auto;
+
+                    }
+        
+                }
+            }
+
+            .modify{
+                display: flex;
+                margin-bottom: 10px;
+                margin-top: auto;
+                margin-right: auto;
+                margin-right: auto;
+
+                .edit{
+                    margin-left: auto;
+                    margin-right: auto;
+                    // border: 1px solid $conseptColor;
+                    // border-radius: 5px;
+
+                    a{
+                        position: relative;
+                        display: inline-block;
+                        transition: .3s;
+                        text-decoration: none;
+                        color: $baseStringColor;
+                      
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background-color: $conseptColor;
+                            transition: .3s;
+                            transform: translateX(-50%);
+                        }
+                        
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .delete{
+                    margin-left: auto;
+                    margin-right: auto;
+                    // border: 1px solid $conseptColor;
+                    // border-radius: 5px;
+
+                    a{
+                        position: relative;
+                        display: inline-block;
+                        transition: .3s;
+                        text-decoration: none;
+                        color: $baseStringColor;
+
+                      
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background-color: $conseptColor;
+                            transition: .3s;
+                            transform: translateX(-50%);
+                        }
+                        
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+    
+}
+
+.footer-cotainer{
+    border-top: double 2px $conseptColor;
+    text-align: right;
+    color: $conseptColor;
+    padding-right: 10px;
+    font-size: 10px;
+}
+
+

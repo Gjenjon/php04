@@ -1,0 +1,308 @@
+body {
+  background-color: rgb(15, 10, 38);
+  color: white;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+header .header-title {
+  background-color: rgb(15, 10, 38);
+  display: flex;
+  width: 100%;
+  height: 64px;
+}
+header .header-title .logo {
+  display: flex;
+}
+header .header-title .logo img {
+  filter: invert(17%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(0) invert(100%) contrast(106%);
+}
+header .header-title .logo h1 {
+  margin: auto 10px;
+  color: rgb(17, 230, 212);
+}
+header .header-title .logo h2 {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 200;
+  font-size: 24px;
+}
+header .header-title .nav {
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+header .header-title .nav .nav-bar {
+  display: flex;
+  font-size: 16px;
+  color: rgb(17, 230, 212);
+}
+header .header-title .nav .nav-bar .logout {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header .header-title .nav .nav-bar .logout a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+header .header-title .nav .nav-bar .logout a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(17, 230, 212);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+header .header-title .nav .nav-bar .logout a:hover::after {
+  width: 100%;
+}
+
+.title-container {
+  margin: 10px auto;
+  width: 1024px;
+  height: 256px;
+  display: flex;
+  position: relative;
+}
+.title-container .left {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.title-container .left span {
+  color: rgb(17, 230, 212);
+}
+.title-container .left #typing {
+  -webkit-animation: 1s blink-bar linear infinite;
+          animation: 1s blink-bar linear infinite;
+}
+@-webkit-keyframes blink-bar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink-bar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.title-container .right {
+  position: absolute;
+  left: 35%;
+  top: -115%;
+  color: rgb(17, 230, 212);
+  font-size: 10px;
+  transform: scale(0.3);
+}
+
+.register-container {
+  margin: 100px auto;
+  width: 1024px;
+}
+.register-container .register-title span {
+  color: rgb(17, 230, 212);
+  padding-left: 128px;
+  font-size: 22px;
+}
+.register-container .register-field {
+  display: flex;
+}
+.register-container .left {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.register-container .left ul {
+  height: 128px;
+}
+.register-container .left li {
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 500;
+  list-style: none;
+}
+.register-container .right {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: auto;
+}
+.register-container .right ul {
+  height: 128px;
+}
+.register-container .right li {
+  font-size: 18px;
+  padding: 5px;
+  font-weight: 500;
+  list-style: none;
+}
+.register-container .right .input-bar {
+  width: 256px;
+}
+.register-container .right .input-comment {
+  height: 64px;
+}
+.register-container .right .button {
+  margin-left: auto;
+  margin-right: auto;
+}
+.register-container .user-register {
+  text-align: center;
+}
+.register-container .user-register a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+.register-container .user-register a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(17, 230, 212);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.register-container .user-register a:hover::after {
+  width: 100%;
+}
+
+.display-container {
+  margin: 100px auto;
+  width: 1024px;
+}
+.display-container .display-title span {
+  color: rgb(17, 230, 212);
+  padding-left: 128px;
+  font-size: 22px;
+}
+.display-container .display-field {
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-container .display-field .card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 512px;
+  height: 256px;
+  border: 1px solid rgb(17, 230, 212);
+  border-radius: 5px;
+}
+.display-container .display-field .card .result {
+  margin: auto;
+  display: flex;
+}
+.display-container .display-field .card .result .left {
+  margin-left: 5px;
+  width: 146.2857142857px;
+}
+.display-container .display-field .card .result .left li {
+  color: rgb(17, 230, 212);
+  font-weight: 700;
+  list-style: none;
+  padding: 5px;
+}
+.display-container .display-field .card .result .right {
+  margin-right: 5px;
+  width: 341.3333333333px;
+}
+.display-container .display-field .card .result .right li {
+  list-style: none;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow: auto;
+}
+.display-container .display-field .card .modify {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: auto;
+  margin-right: auto;
+  margin-right: auto;
+}
+.display-container .display-field .card .modify .edit {
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-container .display-field .card .modify .edit a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+.display-container .display-field .card .modify .edit a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(17, 230, 212);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.display-container .display-field .card .modify .edit a:hover::after {
+  width: 100%;
+}
+.display-container .display-field .card .modify .delete {
+  margin-left: auto;
+  margin-right: auto;
+}
+.display-container .display-field .card .modify .delete a {
+  position: relative;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+.display-container .display-field .card .modify .delete a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(17, 230, 212);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.display-container .display-field .card .modify .delete a:hover::after {
+  width: 100%;
+}
+
+.footer-cotainer {
+  border-top: double 2px rgb(17, 230, 212);
+  text-align: right;
+  color: rgb(17, 230, 212);
+  padding-right: 10px;
+  font-size: 10px;
+}/*# sourceMappingURL=style.css.map */
